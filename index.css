@@ -443,6 +443,7 @@ body:not(.user-is-tabbing) a:focus {
 .work__box {
     display: flex;
     align-items: center;
+    filter: brightness(90%); /* adjust value between 0-100% */
 }
 
 @media(max-width: 900px) {
@@ -512,12 +513,14 @@ body:not(.user-is-tabbing) a:focus {
 .client__logos {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
     filter: invert(100%) grayscale(100%) opacity(.8);
 }
 
 .client__logo {
     height: 6.5rem;
-    max-width: 18rem;
+    max-width: 5rem;
 }
 
 @media(max-width: 1240px) {
@@ -551,6 +554,13 @@ body:not(.user-is-tabbing) a:focus {
 .about__photo-container {
     margin-bottom: var(--gutter-normal);
 }
+
+.about__photo {
+  width: 200px; /* Or any smaller value */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 10px; /* Optional: rounds corners */
+}
+
 
 @media(min-width: 901px) {
     .about__text {
